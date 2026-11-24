@@ -1,0 +1,127 @@
+﻿<Window x:Class="wp.RegistrationWindow"
+ xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+ xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+ Title="Регистрация"
+ Height="570" Width="590" Background="#FF698FC1">
+
+    <Grid Margin="24">
+
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="Auto"/>
+        </Grid.RowDefinitions>
+
+        <StackPanel Orientation="Horizontal"
+              Margin="0,0,0,10">
+
+            <Border Width="42" Height="42"
+           CornerRadius="21"
+           Background="#B9D9F4">
+
+                <TextBlock Text="♟"
+               FontSize="26"
+               Foreground="#547AA8"
+               HorizontalAlignment="Center"
+               VerticalAlignment="Center"/>
+            </Border>
+
+            <TextBlock Text="Registration"
+              FontSize="20"
+              FontWeight="Bold"
+              VerticalAlignment="Center"
+              Margin="8,0" Foreground="White"/>
+        </StackPanel>
+
+        <Grid Grid.Row="1">
+
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+            </Grid.ColumnDefinitions>
+
+            <StackPanel Margin="0,0,15,0">
+
+                <TextBlock Text="Login" Foreground="White"/>
+                <TextBox x:Name="LoginBox" Background="#FFA2CEF9" BorderBrush="{x:Null}"/>
+
+                <TextBlock Text="Password" Foreground="White"/>
+                <PasswordBox x:Name="PasswordBox"
+                 Height="30"
+                 Margin="0,3,0,8" Background="#FFA2CEF9" BorderBrush="{x:Null}"/>
+
+                <TextBlock Text="Фамилия" Foreground="White"/>
+                <TextBox x:Name="SurnameBox" Background="#FFA2CEF9" BorderBrush="{x:Null}"/>
+
+                <TextBlock Text="Имя" Foreground="White"/>
+                <TextBox x:Name="NameBox" Background="#FFA2CEF9" BorderBrush="{x:Null}"/>
+
+                <TextBlock Text="Отчество*" Foreground="White"/>
+                <TextBox x:Name="PatronymicBox" Background="#FFA2CEF9" BorderBrush="{x:Null}"/>
+
+                <TextBlock Text="Дата рождения" Foreground="White"/>
+                <DatePicker x:Name="BirthDatePicker"
+                Height="29"
+                Margin="0,3,0,8"/>
+
+            </StackPanel>
+
+            <StackPanel Grid.Column="1"
+               Margin="15,0,0,0">
+
+                <TextBlock Text="Выберите пол" Foreground="White"/>
+
+                <ComboBox x:Name="GenderBox">
+                    <ComboBoxItem Content="Мужской"/>
+                    <ComboBoxItem Content="Женский"/>
+                </ComboBox>
+
+                <TextBlock Text="Телефон" Foreground="White"/>
+                <TextBox x:Name="PhoneBox" Background="#FFA2CEF9" BorderBrush="{x:Null}"/>
+
+                <TextBlock Text="E-mail*" Foreground="White"/>
+                <TextBox x:Name="EmailBox" Background="#FFA2CEF9" BorderBrush="{x:Null}"/>
+
+                <TextBlock Text="Размер верха*" Foreground="White"/>
+
+                <ComboBox x:Name="TopSizeBox">
+                    <ComboBoxItem Content="XS"/>
+                    <ComboBoxItem Content="S"/>
+                    <ComboBoxItem Content="M"/>
+                    <ComboBoxItem Content="L"/>
+                    <ComboBoxItem Content="XL"/>
+                </ComboBox>
+
+                <TextBlock Text="Размер низа*" Foreground="White"/>
+
+                <ComboBox x:Name="BottomSizeBox">
+                    <ComboBoxItem Content="XS"/>
+                    <ComboBoxItem Content="S"/>
+                    <ComboBoxItem Content="M"/>
+                    <ComboBoxItem Content="L"/>
+                    <ComboBoxItem Content="XL"/>
+                </ComboBox>
+
+                <TextBlock Text="Размер обуви(RUS)*" Foreground="White"/>
+                <TextBox x:Name="ShoeSizeBox" Background="#FFA2CEF9" BorderBrush="{x:Null}"/>
+
+            </StackPanel>
+        </Grid>
+
+        <StackPanel Grid.Row="2"
+              HorizontalAlignment="Center"
+              Width="180">
+
+            <Button Content="Registration"
+           Click="Registration_Click" Height="39" Background="#FFA2CEF9" Foreground="#FF4171AF" FontWeight="Bold" Width="168" BorderBrush="{x:Null}"/>
+
+            <Button Content="Вернуться назад"
+           Background="Transparent"
+           Foreground="White"
+           Click="Back_Click" BorderBrush="{x:Null}"/>
+
+        </StackPanel>
+        <TextBlock HorizontalAlignment="Left" Margin="21,41,0,0" Grid.Row="2" TextWrapping="Wrap" Text="* - необязательно к заполнению" VerticalAlignment="Top" Foreground="White"/>
+
+    </Grid>
+</Window>

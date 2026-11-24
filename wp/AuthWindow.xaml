@@ -1,0 +1,54 @@
+﻿<Window x:Class="wp.AuthWindow"
+ xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+ xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+ Title="Авторизация"
+ Height="510" Width="390" Background="#FF698FC1">
+
+    <Grid Margin="35">
+
+        <StackPanel VerticalAlignment="Center"
+              HorizontalAlignment="Center"
+              Width="205">
+
+            <Border Width="66" Height="66"
+           CornerRadius="33"
+           Background="#B9D9F4"
+           HorizontalAlignment="Center">
+
+                <TextBlock Text="♟"
+               FontSize="38"
+               Foreground="#547AA8"
+               HorizontalAlignment="Center"
+               VerticalAlignment="Center"/>
+            </Border>
+
+            <TextBlock Text="Authorization"
+              FontSize="24"
+              FontWeight="Bold"
+              HorizontalAlignment="Center"
+              Margin="0,0,0,20" Foreground="White"/>
+
+            <TextBlock Text="Login"
+              HorizontalAlignment="Center" Foreground="White"/>
+
+            <TextBox x:Name="LoginBox" Background="#FFA2CEF9"/>
+
+            <TextBlock Text="Password"
+              HorizontalAlignment="Center" Foreground="White"/>
+
+            <PasswordBox x:Name="PasswordBox"
+                Height="20"
+                Margin="0,3,0,8" BorderBrush="#FFA2CEF9" Background="#FFA2CEF9"/>
+
+            <Button Content="Log in"
+           Height="47"
+           Margin="0,25,0,4"
+           Click="Login_Click" Foreground="#FF4171B0" BorderBrush="#FFA2CEF9" Background="#FFA2CEF9" FontWeight="Bold"/>
+
+            <Button Content="Регистрация"
+           Foreground="White"
+           Click="Register_Click" Background="{x:Null}" BorderBrush="{x:Null}"/>
+
+        </StackPanel>
+    </Grid>
+</Window>

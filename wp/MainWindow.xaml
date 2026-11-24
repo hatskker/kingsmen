@@ -1,0 +1,35 @@
+﻿<Window x:Class="wp.MainWindow"
+ xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+ xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+ Title="Главная страница"
+ Height="510" Width="390">
+
+    <Grid Background="#FF698FC1">
+
+        <StackPanel Width="215"
+              HorizontalAlignment="Center"
+              VerticalAlignment="Center">
+
+            <TextBlock Text="Главная страница"
+              FontSize="25"
+              FontWeight="Bold"
+              HorizontalAlignment="Center"
+              Margin="0,0,0,26" Foreground="White"/>
+
+            <Button Content="Услуги"
+           Height="48"
+           Click="Services_Click" Background="#FFA2CEF9" FontSize="18" FontWeight="Bold" Foreground="#FF4370AE" RenderTransformOrigin="1,0" BorderBrush="{x:Null}"/>
+
+            <Button Content="Сотрудники"
+           Height="48"
+           Margin="0,16"
+           Click="Employees_Click" Background="#FFA2CEF9" FontWeight="Bold" FontSize="18" Foreground="#FF4370AE" BorderBrush="{x:Null}"/>
+
+            <Button Content="Клиенты"
+           Height="48"
+           Click="Clients_Click" Background="#FFA2CEF9" FontWeight="Bold" FontSize="18" Foreground="#FF4370AE" BorderBrush="{x:Null}"/>
+
+        </StackPanel>
+
+    </Grid>
+</Window>
